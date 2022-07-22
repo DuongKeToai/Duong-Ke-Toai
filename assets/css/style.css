@@ -1,0 +1,198 @@
+body {
+    /* font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5; */
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/*Global*/
+
+
+
+/* Header */
+/*Nav bar */
+#nav-search{
+    width: 350px;
+}
+#nav-search-magrin{
+    margin: auto;
+}
+
+.nav-bar-bg{
+    background-color: #35424a;
+    color: white;
+    border-bottom: #e8491d 3px solid;
+}
+
+#nav-color{
+    background-color: #35424a;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#search-width-1{
+    width:30%;
+}
+
+
+  
+
+/* <!------ carousel -----> */
+.bg-resize{
+    height: 500px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.carousel-item .container{
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    width: 50%;
+}
+
+.carousel-item .container h2{
+    font-size: 65px;
+    color: #ffc107;
+    text-align: center;
+    opacity: 0;
+}
+
+.carousel-item .container p{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    opacity: 0;
+}
+
+.carousel-item:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+} 
+
+/** Carousel Effects **/
+.carousel-item.active h2{
+    animation: fadeInLeft 0.5s ease forwards;
+}
+
+.carousel-item.active p{
+    animation: fadeInRight 0.5s ease forwards;
+}
+
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/***** FACILITY ******/
+.img-resize{
+    height: 200px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.facility h1{
+    font-size: 34px;
+    font-weight: 900;
+    padding-bottom: 5px;
+}
+.title{
+    border-bottom: #e8491d 3px solid;
+}
+
+.card{
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.padding-btn{
+    margin-top: auto;
+}
+
+/** Zoom in Eff**/
+
+.inner{
+    overflow: hidden;
+}
+
+.inner img{
+    transition: all 1.5s ease;
+}
+
+.card-effect:hover img{
+    transform: scale(1.2);
+}
+
+/*** Card effects ***/
+
+.card-effect:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+}
+
+.card-effect{
+    transition: transform .5s;
+}
+
+/**** Footer ******/
+footer {
+    padding: 40px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+/**** Register ****/
+
+.register-margin{
+    margin-top: 100px;
+}
+
+
+/****Login****/
+
+.login-margin{
+    margin-top: 100px;
+    margin-bottom: 15%;
+}
+
+a:is(:link, :active, :visited).active{
+    color:white;
+    background-color: #e8491d;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.5s;
+    width: fit-content;
+}
